@@ -1,7 +1,19 @@
 var express = require("express");
 var bodyParser = require('body-parser');
-var app = express();
+var mongoose = require("mongoose");
+var uriUtility = require('mongodb-uri');
+var Names = require('./models/names'); // works without .js
 
+var mongodbUri = 'mongodb://localhost/names'; // connects to localhost db
+var mongooseUri = uriUtility.formatMongoose(mongodbUri);
+
+var options = {
+  server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000}},
+  replset: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000}}
+};
+mongoose.connect(mongodbUri, options);
+
+var app = express();
 app.use(bodyParser.json({
   type: 'application/json'
 }));
@@ -21,13 +33,20 @@ app.get("/", function (req, res) {
 
 app.get("/names", function (req, res) {
   // res json 
-  res.json(allOurNames);
+  //res.json(allOurNames);
+  Names.find(function(err, names){
+    res.json(names);
+  });
 });
  
 app.post("/names", function(req, res) {
-  console.log(req.body.name);
-  allOurNames.push(req.body.name);
-  res.json("name received " + req.body.name)
+  //console.log(req.body.name);
+  //allOurNames.push(req.body.name);
+  var name = new Names();
+  name.name  = req.body.name;
+  name.save(function(err, nameReturned) {
+    res.json("name received " + nameReturned);
+  });
 });
 
 app.get("/speak/:animal", function (req, res) {
