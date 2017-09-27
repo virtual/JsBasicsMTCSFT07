@@ -43,3 +43,93 @@ Exercise 4:
 //Make and run a javascript function that changes the text color of an HTML element, executed from a button. 
 //Then, make another button and build the same functionality using jQuery.
 
+Exercise 5:
+
+//Make a javascript function that merges two arrays. The input will be two arrays and the output will be 1 array. Keep the //order of elements within each array, where the second array follows the first array. i.e.  
+//([1, 2, 3], [4, 5, 6]) => [1, 2, 3, 4, 5, 5]
+
+Exercise 6:
+//Make text fade in and out using jquery. Use the setInterval javascript function and the 'hidden' css property. Use whatever html file and html tag you want.
+
+Exercise 7:
+//Write a sentence in a <p> tag. Using jQuery, attach a double-click event to the <p> element, whose callback drastically changes the meaning of the sentence.
+
+Exercise 8:
+//Write a javascript function that accepts an object and returns a count of the number of methods in that object.
+
+Exercise 9:
+
+var plant = {
+  kingdom:"plantae",
+  genus:"Epipremnum",
+  commonName:"dumb house plant"
+  fetchName: function(){
+    //write code in here
+  }
+}
+
+
+//fill in the fetchName function to grab the properties kingdom and genus, and returns the string:
+//"the {commonName}, of kingdom {kingdom} and genus {genus}, is next to the closet behind us." Use TDD to test
+//and console log the string.
+
+Exercise 10:
+var loading = "loading....";
+
+//write code here
+
+setTimeout(function(){
+  var doneLoading = "Loading Complete!"
+  //write the code here
+
+}, 4000);
+
+//write a jquery or javascript function that displays the string "loading..." on an html page
+//and then replaces that string with "Loading Complete" after the timeout has finished. Use the code above.
+
+Exercise 11:
+var bar = true;
+
+function toggle(){
+  if (bar){
+    console.log('yes');
+  } else {
+    console.log('no')
+  }
+}
+
+toggle();
+toggle();
+toggle();
+toggle();
+
+//Currently, the 4 toggle calls log "yes" "yes" "yes "yes." Edit the function toggle so that the 4 calls log this: "yes" "no" "yes" "no" 
+
+Exercise 12:
+//Set a background-image using the jQuery CSS property. The image should answer this question - if moby was a person, who //would he be?
+
+Exercise 13:
+//Create an html file that has a bootstrap theme from https://startbootstrap.com/template-categories/all/
+
+Exercise 14:
+//You guys have used cdn's and have some familiarty with html. Let's do something interesting with this knowledge - follow //this tutorial - http://www.chartjs.org/docs/latest/getting-started/ to get the default chart into an html file. 
+//In the "data" object passed into the "new Chart(.." edit the "labels" and datasets.data to display some of information in //the chart found at //https://www.ncdc.noaa.gov/sotc/tornadoes/201708 (the chart titled: August Tornado Counts
+//*2017 count preliminary)
+
+Exercise 15:
+//Add a CSS class using jQuery when you hit a button.
+
+Exercise 16: 
+//using jQuery, console.log the class of the clicked element
+
+Exercise 17:
+//Using Javascript and TDD, write a function that sorts an array of strings in alphabetical order
+
+Exercise5 18:
+//Write a javascript function that randomly returns an integer between 0 and 2. Using this return value and an html button, switch the background image between 3 images. 
+
+Exercise 19: 
+//Using jquery's get method, grab some data using one of google's data apis, using the url //https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699 . Use jquery or javascript to create an html div
+//and put the books title in inside the div. Use css to style the font size to be 20px;
+
+
