@@ -44,6 +44,7 @@ app.post("/names", function(req, res) {
   //allOurNames.push(req.body.name);
   var name = new Names();
   name.name  = req.body.name;
+  name.birthday = req.body.birthday;
   name.save(function(err, nameReturned) {
     res.json("name received " + nameReturned);
   });

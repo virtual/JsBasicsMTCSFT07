@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 
 var NamesSchema = new mongoose.Schema({
-  name: String
+  name: String,
+  birthday: Date
 });
 
 module.exports = mongoose.model("Names", NamesSchema);

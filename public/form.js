@@ -4,7 +4,7 @@ var allOurNames = []; // our little database EJS template engine?
 var refreshList = function () {
   $("#nameList").empty();
   allOurNames.forEach((name) => {
-    $("#nameList").append("<li>" + name.name + "</li>");
+    $("#nameList").append("<li>" + name.name + " - birthday: " + name.birthday + "</li>");
   });
 };
 // callback passes the data we are trying to retrieve
@@ -19,13 +19,13 @@ $(function () { // asynchronus .ready
   // asynchronus, only works when you do a click
   $('#formButton').click(function (e) {
     e.preventDefault();
-    var newName = { name: $('#name').val() };
+    var newName = { 
+      name: $('#name').val() ,
+      birthday: $('#birthday').val()
+    };
     allOurNames.push(newName);
     // talk to our server - jquery post docs
-    $.post("/names",  {
-      // we want to push req.body.name (www-urlencode)
-      name: $('#name').val()
-    });
+    $.post("/names", newName);
     refreshList();
 
 
