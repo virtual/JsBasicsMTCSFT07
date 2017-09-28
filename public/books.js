@@ -6,6 +6,7 @@ var book = {
 };
 
 $(function(){
+  // asyns
   $.get('https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699', function(data){
     book.title = data.items[0].volumeInfo.title;
     book.author = data.items[0].volumeInfo.authors;
