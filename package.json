@@ -11,23 +11,17 @@
   },
   "author": "Mark Buckner <buckner.a.mark@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
+  "dependencies": { 
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "express": "^4.15.5",
     "mocha": "^3.5.3",
     "mongodb-uri": "^0.9.7",
     "mongoose": "^4.11.13"
-=======
-    "express": "^4.15.5"
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^3.5.3"
->>>>>>> 297ce02745d017ac3df9a0c181991fc887a2a04e
-=======
+    "mocha": "^3.5.3" 
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "express": "^4.15.5",
@@ -35,7 +29,6 @@
     "mocha": "^3.5.3",
     "mongodb": "^2.2.31",
     "mongodb-uri": "^0.9.7",
-    "mongoose": "^4.11.13"
->>>>>>> 471c3f9dd59910f2e1369e8d659983e0440e0d00
+    "mongoose": "^4.11.13" 
   }
 }
